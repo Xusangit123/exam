@@ -174,11 +174,11 @@ class _PlayerScreenState extends State<PlayerScreen> {
               children: [
                 IconButton(
                   icon: const Icon(Icons.skip_previous_rounded, color: Colors.white, size: 36),
-                  onPressed: () => _audioPlayer.seek(Duration.zero), // Audioni boshiga qaytaradi
+                  onPressed: () => _audioPlayer.seek(Duration.zero), 
                 ),
                 IconButton(
                   icon: const Icon(Icons.replay_10_rounded, color: Colors.white, size: 36),
-                  onPressed: () => _seekRelative(-10), // 10 soniya ORQAGA
+                  onPressed: () => _seekRelative(-10), 
                 ),
                 
                 GestureDetector(
@@ -199,7 +199,7 @@ class _PlayerScreenState extends State<PlayerScreen> {
                 
                 IconButton(
                   icon: const Icon(Icons.forward_10_rounded, color: Colors.white, size: 36),
-                  onPressed: () => _seekRelative(10), // 10 soniya OLDINGA
+                  onPressed: () => _seekRelative(10), 
                 ),
                 IconButton(
                   icon: const Icon(Icons.skip_next_rounded, color: Colors.white, size: 36),

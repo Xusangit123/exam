@@ -1,7 +1,7 @@
 import 'package:firebase/book/core/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
-// CustomTextField faylini bu yerda import qiling
-// import 'path_to_your_custom_text_field.dart';
+
+
 
 class ForgotPassword extends StatefulWidget {
   const ForgotPassword({super.key});
@@ -25,35 +25,35 @@ class _ForgotPasswordState extends State<ForgotPassword> {
     return Scaffold(
       body: Stack(
         children: [
-          // 1. Orqa fon rasmi (Background Image)
+          
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/images/jon.jpg'), // Rasm manzili
+                image: AssetImage('assets/images/jon.jpg'), 
                 fit: BoxFit.cover,
                 alignment: Alignment.topCenter,
               ),
             ),
           ),
           
-          // 2. Qorong'u qatlam (Dark Overlay) rasm ustini biroz to'sib matnlarni ko'rsatish uchun
+          
           Container(
             color: Colors.black.withOpacity(0.4),
           ),
 
-          // 3. Asosiy Kontent
+          
           SafeArea(
             child: Form(
               key: _formKey,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Yuqoridagi "Back to Log in" tugmasi
+                  
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
                     child: TextButton.icon(
                       onPressed: () {
-                        Navigator.pop(context); // Orqaga qaytish funksiyasi
+                        Navigator.pop(context); 
                       },
                       icon: const Icon(Icons.arrow_back_ios, color: Colors.white, size: 18),
                       label: const Text(
@@ -74,7 +74,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
 
                   const Spacer(flex: 3),
 
-                  // "Recover Password" sarlavhasi
+                  
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 24.0),
                     child: Text(
@@ -89,7 +89,6 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   
                   const SizedBox(height: 24),
 
-                  // Forma uchun qorong'u karta (Card Container)
                   Container(
                     margin: const EdgeInsets.symmetric(horizontal: 16),
                     padding: const EdgeInsets.all(24),
@@ -101,7 +100,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                       mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // Izoh matni
+                        
                         const Text(
                           'Forgot your password? Don’t worry, enter your email to reset your current password.',
                           style: TextStyle(
@@ -113,7 +112,6 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                         
                         const SizedBox(height: 24),
 
-                        // Siz yaratgan CustomTextField vidjeti
                         CustomTextField(
                           controller: _emailController,
                           hintText: 'Email',
@@ -132,18 +130,16 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                         
                         const SizedBox(height: 20),
 
-                        // Submit Tugmasi (Dizayndagidek xatolik tuzatilib "Submit" deb yozildi)
                         SizedBox(
                           width: double.infinity,
                           height: 56,
                           child: ElevatedButton(
                             onPressed: () {
                               if (_formKey.currentState!.validate()) {
-                                // Tiklash kodini yuborish logikasi shu yerga yoziladi
                               }
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: const Color(0xFFD0E7C5), // Och yashil rang
+                              backgroundColor: const Color(0xFFD0E7C5), 
                               foregroundColor: Colors.black87,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(14),
@@ -162,7 +158,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                         
                         const SizedBox(height: 24),
 
-                        // Pastki "Sign up" qismi
+                        
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -172,7 +168,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                // Ro'yxatdan o'tish sahifasiga o'tish
+                                
                               },
                               child: const Text(
                                 'Sign up',

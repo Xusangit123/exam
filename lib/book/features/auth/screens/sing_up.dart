@@ -1,7 +1,7 @@
 import 'package:firebase/book/core/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
-// CustomTextField faylini bu yerda import qiling
-// import 'path_to_your_custom_text_field.dart';
+
+
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -29,23 +29,23 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return Scaffold(
       body: Stack(
         children: [
-          // 1. Orqa fon rasmi (Background Image)
+          
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/images/jon.jpg'), // Rasm manzili
+                image: AssetImage('assets/images/jon.jpg'), 
                 fit: BoxFit.cover,
                 alignment: Alignment.topCenter,
               ),
             ),
           ),
 
-          // 2. Qorong'u qatlam (Dark Overlay)
+          
           Container(
             color: Colors.black.withOpacity(0.4),
           ),
 
-          // 3. Asosiy Kontent
+          
           SafeArea(
             child: SingleChildScrollView(
               child: Form(
@@ -53,10 +53,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Ekran tepasidan bo'shliq (SizedBox o'rniga dinamik moslashuv uchun)
+                    
                     const SizedBox(height: 120),
 
-                    // "Sign up" sarlavhasi
+                    
                     const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 24.0),
                       child: Text(
@@ -71,7 +71,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
                     const SizedBox(height: 24),
 
-                    // Forma uchun qorong'u karta (Card Container)
+                    
                     Container(
                       margin: const EdgeInsets.symmetric(horizontal: 16),
                       padding: const EdgeInsets.all(24),
@@ -83,7 +83,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         mainAxisSize: MainAxisSize.min,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          // Izoh matni
+                          
                           const Text(
                             'Looks like you don’t have an account.\nLet’s create a new account for you.',
                             style: TextStyle(
@@ -95,7 +95,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
                           const SizedBox(height: 24),
 
-                          // 1. Name Field
+                          
                           CustomTextField(
                             controller: _nameController,
                             hintText: 'Name',
@@ -111,7 +111,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
                           const SizedBox(height: 16),
 
-                          // 2. Email Field
+                          
                           CustomTextField(
                             controller: _emailController,
                             hintText: 'Email',
@@ -130,11 +130,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
                           const SizedBox(height: 16),
 
-                          // 3. Password Field (Ko'zcha bilan)
+                          
                           CustomTextField(
                             controller: _passwordController,
                             hintText: 'Password',
-                            isPassword: true, // Parol ko'rinishini faollashtiradi
+                            isPassword: true, 
                             fillColor: const Color(0xFFEDF4F2),
                             styleColor: Colors.black87,
                             validator: (value) {
@@ -150,7 +150,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
                           const SizedBox(height: 20),
 
-                          // Ommaviy oferta va Maxfiylik siyosati matni
+                          
                           RichText(
                             text: TextSpan(
                               style: const TextStyle(
@@ -181,18 +181,18 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
                           const SizedBox(height: 24),
 
-                          // Create Account Tugmasi
+                          
                           SizedBox(
                             width: double.infinity,
                             height: 56,
                             child: ElevatedButton(
                               onPressed: () {
                                 if (_formKey.currentState!.validate()) {
-                                  // Ro'yxatdan o'tish logikasi shu yerga yoziladi
+                                  
                                 }
                               },
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color(0xFFD0E7C5), // Och yashil
+                                backgroundColor: const Color(0xFFD0E7C5), 
                                 foregroundColor: Colors.black87,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(14),
@@ -211,7 +211,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
                           const SizedBox(height: 24),
 
-                          // Pastki "Log in" qismi
+                          
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -221,7 +221,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  Navigator.pop(context); // Tizimga kirish ekraniga qaytish
+                                  Navigator.pop(context); 
                                 },
                                 child: const Text(
                                   'Log in',

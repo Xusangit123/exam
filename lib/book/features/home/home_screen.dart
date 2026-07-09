@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-// Kitob va Mualliflar uchun ma'lumotlar modeli
+
 class Book {
   final String id;
   final String title;
@@ -130,7 +130,7 @@ class HomeScreen extends StatelessWidget {
       padding: const EdgeInsets.only(right: 16.0),
       child: GestureDetector(
         onTap: () {
-          // GoRouter orqali profil sahifasiga o'tish
+          
           context.push('/account'); 
         },
         child: const CircleAvatar(
@@ -198,11 +198,11 @@ class HomeScreen extends StatelessWidget {
           const SizedBox(height: 24),
   Container(
       margin: const EdgeInsets.symmetric(horizontal: 16),
-      // Rasm chetlari yumaloq bo'lishi uchun ClipRRect ichiga olamiz
+      
       child: ClipRRect(
         borderRadius: BorderRadius.circular(16),
         child: Image.asset(
-          'assets/images/books.png', // books.png rasmingizning yo'li
+          'assets/images/books.png', 
           width: double.infinity,
           fit: BoxFit.cover,
         ),
@@ -275,7 +275,7 @@ class HomeScreen extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 16),
       padding: const EdgeInsets.only(left: 20, top: 20, bottom: 20, right: 12),
       decoration: BoxDecoration(
-        color: const Color(0xFF1C2237), // Rasmdagi maxsus ko'k-binafsha rang fon
+        color: const Color(0xFF1C2237), 
         borderRadius: BorderRadius.circular(16),
       ),
       child: Row(
@@ -397,7 +397,7 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Kitob muqovasi (To'g'ri nisbat va soya bilan)
+                  
                   Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),
@@ -421,7 +421,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   
-                  // Kitob sarlavhasi
+                  
                   Text(
                     book.title,
                     style: const TextStyle(
@@ -434,7 +434,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 2),
                   
-                  // Muallif ismi
+                  
                   Text(
                     book.author,
                     style: const TextStyle(color: Colors.white, fontSize: 11.5),

@@ -5,7 +5,7 @@ class CreditCardItem extends StatelessWidget {
   final String cardNumber;
   final String expiryDate;
   final bool isDefault;
-  final VoidCallback onTap; // Karta bosilganda ishlaydi
+  final VoidCallback onTap; 
   final VoidCallback onDelete;
 
   const CreditCardItem({
@@ -24,7 +24,7 @@ class CreditCardItem extends StatelessWidget {
     final textColor = isDefault ? Colors.black : Colors.white;
 
     return InkWell(
-      onTap: onTap, // Bosish hodisasi ulandi
+      onTap: onTap, 
       borderRadius: BorderRadius.circular(12),
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),

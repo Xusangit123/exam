@@ -1,7 +1,7 @@
 import 'package:firebase/book/core/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
-// CustomTextField faylini bu yerda import qiling
-// import 'path_to_your_custom_text_field.dart';
+
+
 
 class LoginPasswordScreen extends StatefulWidget {
   const LoginPasswordScreen({super.key});
@@ -25,23 +25,23 @@ class _LoginPasswordScreenState extends State<LoginPasswordScreen> {
     return Scaffold(
       body: Stack(
         children: [
-          // 1. Orqa fon rasmi (Background Image)
+          
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/images/jon.jpg'), // Rasm manzili
+                image: AssetImage('assets/images/jon.jpg'), 
                 fit: BoxFit.cover,
                 alignment: Alignment.topCenter,
               ),
             ),
           ),
 
-          // 2. Qorong'u qatlam (Dark Overlay)
+          
           Container(
             color: Colors.black.withOpacity(0.4),
           ),
 
-          // 3. Asosiy Kontent
+          
           SafeArea(
             child: Form(
               key: _formKey,
@@ -50,7 +50,7 @@ class _LoginPasswordScreenState extends State<LoginPasswordScreen> {
                 children: [
                   const Spacer(flex: 3),
 
-                  // "Log in" sarlavhasi
+                  
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 24.0),
                     child: Text(
@@ -65,7 +65,7 @@ class _LoginPasswordScreenState extends State<LoginPasswordScreen> {
 
                   const SizedBox(height: 24),
 
-                  // Forma uchun qorong'u karta (Card Container)
+                  
                   Container(
                     margin: const EdgeInsets.symmetric(horizontal: 16),
                     padding: const EdgeInsets.all(24),
@@ -77,17 +77,17 @@ class _LoginPasswordScreenState extends State<LoginPasswordScreen> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         
-                        // Foydalanuvchi ma'lumotlari qatori (Avatar, Name, Email, Check)
+                        
                         Row(
                           children: [
-                            // Dumaloq Profil Rasmi (Avatar)
+                            
                             const CircleAvatar(
                               radius: 30,
-                              backgroundImage: AssetImage('assets/images/john_doe.jpg'), // Profil rasmi
+                              backgroundImage: AssetImage('assets/images/john_doe.jpg'), 
                             ),
                             const SizedBox(width: 16),
                             
-                            // Ism va Email
+                            
                             Expanded(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -113,10 +113,10 @@ class _LoginPasswordScreenState extends State<LoginPasswordScreen> {
                               ),
                             ),
                             
-                            // Yashil tasdiq belgisi (Checked icon)
+                            
                             const Icon(
                               Icons.check_circle_outline,
-                              color: Color(0xFFD0E7C5), // Och yashil rang
+                              color: Color(0xFFD0E7C5), 
                               size: 24,
                             ),
                           ],
@@ -124,11 +124,11 @@ class _LoginPasswordScreenState extends State<LoginPasswordScreen> {
 
                         const SizedBox(height: 24),
 
-                        // Siz yaratgan CustomTextField vidjeti (Password)
+                        
                         CustomTextField(
                           controller: _passwordController,
                           hintText: 'Password',
-                          isPassword: true, // Parol ko'rinishini faollashtiradi (ko'zcha)
+                          isPassword: true, 
                           fillColor: const Color(0xFFEDF4F2),
                           styleColor: Colors.black87,
                           validator: (value) {
@@ -141,18 +141,18 @@ class _LoginPasswordScreenState extends State<LoginPasswordScreen> {
 
                         const SizedBox(height: 20),
 
-                        // Continue Tugmasi
+                        
                         SizedBox(
                           width: double.infinity,
                           height: 56,
                           child: ElevatedButton(
                             onPressed: () {
                               if (_formKey.currentState!.validate()) {
-                                // Tizimga kirish logikasi shu yerga yoziladi
+                                
                               }
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: const Color(0xFFD0E7C5), // Och yashil
+                              backgroundColor: const Color(0xFFD0E7C5), 
                               foregroundColor: Colors.black87,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(14),
@@ -171,10 +171,10 @@ class _LoginPasswordScreenState extends State<LoginPasswordScreen> {
 
                         const SizedBox(height: 20),
 
-                        // Forgot password? havolasi
+                        
                         TextButton(
                           onPressed: () {
-                            // Parolni tiklash ekraniga o'tish
+                            
                           },
                           child: const Text(
                             'Forgot password?',

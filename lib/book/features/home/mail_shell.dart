@@ -10,7 +10,7 @@ class MainShellScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: navigationShell,
-      // Mini Player va BottomNavigationBar bir joyda joylashadi
+      
       bottomNavigationBar: Column(
         mainAxisSize: MainAxisSize.min,
         children: [

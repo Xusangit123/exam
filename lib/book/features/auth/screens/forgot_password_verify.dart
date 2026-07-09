@@ -1,7 +1,5 @@
 import 'package:firebase/book/core/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
-// CustomTextField faylini bu yerda import qiling
-// import 'path_to_your_custom_text_field.dart';
 
 class VerifyCodeScreen extends StatefulWidget {
   const VerifyCodeScreen({super.key});
@@ -25,7 +23,6 @@ class _VerifyCodeScreenState extends State<VerifyCodeScreen> {
     return Scaffold(
       body: Stack(
         children: [
-          // 1. Orqa fon rasmi (Background Image)
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
@@ -35,20 +32,16 @@ class _VerifyCodeScreenState extends State<VerifyCodeScreen> {
               ),
             ),
           ),
-
-          // 2. Qorong'u qatlam (Dark Overlay)
           Container(
             color: Colors.black.withOpacity(0.4),
           ),
 
-          // 3. Asosiy Kontent
           SafeArea(
             child: Form(
               key: _formKey,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Yuqoridagi "Back to Log in" tugmasi
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
                     child: TextButton.icon(
@@ -73,8 +66,6 @@ class _VerifyCodeScreenState extends State<VerifyCodeScreen> {
                   ),
 
                   const Spacer(flex: 3),
-
-                  // "Verify Code" sarlavhasi
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 24.0),
                     child: Text(
@@ -89,7 +80,6 @@ class _VerifyCodeScreenState extends State<VerifyCodeScreen> {
 
                   const SizedBox(height: 24),
 
-                  // Forma uchun qorong'u karta (Card Container)
                   Container(
                     margin: const EdgeInsets.symmetric(horizontal: 16),
                     padding: const EdgeInsets.all(24),
@@ -101,7 +91,6 @@ class _VerifyCodeScreenState extends State<VerifyCodeScreen> {
                       mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // Izoh matni
                         const Text(
                           'An authentication code has been sent to your email.',
                           style: TextStyle(
@@ -113,7 +102,6 @@ class _VerifyCodeScreenState extends State<VerifyCodeScreen> {
 
                         const SizedBox(height: 24),
 
-                        // Tasdiqlash kodini kiritish uchun CustomTextField
                         CustomTextField(
                           controller: _codeController,
                           hintText: 'Enter Code',
@@ -129,14 +117,12 @@ class _VerifyCodeScreenState extends State<VerifyCodeScreen> {
 
                         const SizedBox(height: 20),
 
-                        // Verify Tugmasi
                         SizedBox(
                           width: double.infinity,
                           height: 56,
                           child: ElevatedButton(
                             onPressed: () {
                               if (_formKey.currentState!.validate()) {
-                                // Kodni tekshirish logikasi shu yerga yoziladi
                               }
                             },
                             style: ElevatedButton.styleFrom(
@@ -169,7 +155,6 @@ class _VerifyCodeScreenState extends State<VerifyCodeScreen> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                // Kodni qayta yuborish logikasi
                               },
                               child: Row(
                                 children: const [

@@ -1,7 +1,7 @@
 import 'package:firebase/book/core/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
-// CustomTextField faylini bu yerda import qiling
-// import 'path_to_your_custom_text_field.dart';
+
+
 
 class SetPasswordScreen extends StatefulWidget {
   const SetPasswordScreen({super.key});
@@ -27,23 +27,23 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
     return Scaffold(
       body: Stack(
         children: [
-          // 1. Orqa fon rasmi (Background Image)
+          
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/images/jon.jpg'), // Rasm manzili
+                image: AssetImage('assets/images/jon.jpg'), 
                 fit: BoxFit.cover,
                 alignment: Alignment.topCenter,
               ),
             ),
           ),
 
-          // 2. Qorong'u qatlam (Dark Overlay)
+          
           Container(
             color: Colors.black.withOpacity(0.4),
           ),
 
-          // 3. Asosiy Kontent
+          
           SafeArea(
             child: SingleChildScrollView(
               child: Form(
@@ -53,7 +53,7 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                   children: [
                     const SizedBox(height: 120),
 
-                    // "Set Password" sarlavhasi
+                    
                     const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 24.0),
                       child: Text(
@@ -68,7 +68,7 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
 
                     const SizedBox(height: 24),
 
-                    // Forma uchun qorong'u karta (Card Container)
+                    
                     Container(
                       margin: const EdgeInsets.symmetric(horizontal: 16),
                       padding: const EdgeInsets.all(24),
@@ -81,7 +81,7 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                         children: [
                           const SizedBox(height: 8),
                           
-                          // Muvaffaqiyatli tasdiq belgisi (Yashil aylana ichida check)
+                          
                           Container(
                             padding: const EdgeInsets.all(12),
                             decoration: BoxDecoration(
@@ -100,7 +100,7 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                           
                           const SizedBox(height: 12),
                           
-                          // "Code verified" matni
+                          
                           const Text(
                             'Code verified',
                             style: TextStyle(
@@ -113,7 +113,7 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
 
                           const SizedBox(height: 28),
 
-                          // 1. Yangi parol maydoni
+                          
                           CustomTextField(
                             controller: _passwordController,
                             hintText: 'Enter new password',
@@ -133,7 +133,7 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
 
                           const SizedBox(height: 16),
 
-                          // 2. Parolni qayta kiritish maydoni
+                          
                           CustomTextField(
                             controller: _confirmPasswordController,
                             hintText: 'Re-type new password',
@@ -153,7 +153,7 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
 
                           const SizedBox(height: 8),
                           
-                          // "At-least 8 characters" eslatma matni
+                          
                           alignmentLeft(
                             child: const Text(
                               'At-least 8 characters',
@@ -166,14 +166,14 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
 
                           const SizedBox(height: 24),
 
-                          // Set Password Tugmasi
+                          
                           SizedBox(
                             width: double.infinity,
                             height: 56,
                             child: ElevatedButton(
                               onPressed: () {
                                 if (_formKey.currentState!.validate()) {
-                                  // Yangi parolni saqlash logikasi shu yerda bajariladi
+                                  
                                 }
                               },
                               style: ElevatedButton.styleFrom(
@@ -208,7 +208,7 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
     );
   }
 
-  // Matnni chapga tekislash uchun yordamchi helper vidjet
+  
   Widget alignmentLeft({required Widget child}) {
     return Align(
       alignment: Alignment.centerLeft,

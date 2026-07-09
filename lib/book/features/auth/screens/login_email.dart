@@ -13,7 +13,7 @@ class _LoginEmailState extends State<LoginEmail> {
     return Scaffold(
       body: Stack(
         children: [
-          // Background Image
+          
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
@@ -23,15 +23,15 @@ class _LoginEmailState extends State<LoginEmail> {
               ),
             ),
           ),
-          // Dark overlay to blend the image nicely
+          
 
-          // Main UI Content
+          
           SafeArea(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Spacer(flex: 2),
-                // Heading "Log in"
+                
                 const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 24.0),
                   child: Text(
@@ -44,7 +44,7 @@ class _LoginEmailState extends State<LoginEmail> {
                   ),
                 ),
                 const SizedBox(height: 24),
-                // Bottom Form Card Container
+                
                 Container(
                   margin: const EdgeInsets.symmetric(horizontal: 16),
                   padding: const EdgeInsets.all(24),
@@ -55,7 +55,7 @@ class _LoginEmailState extends State<LoginEmail> {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      // Email Field
+                      
                       TextField(
                         style: const TextStyle(color: Colors.black87),
                         decoration: InputDecoration(
@@ -74,7 +74,7 @@ class _LoginEmailState extends State<LoginEmail> {
                         ),
                       ),
                       const SizedBox(height: 16),
-                      // Continue Button
+                      
                       SizedBox(
                         width: double.infinity,
                         height: 56,
@@ -98,7 +98,7 @@ class _LoginEmailState extends State<LoginEmail> {
                         ),
                       ),
                       const SizedBox(height: 16),
-                      // Forgot Password Link
+                      
                       TextButton(
                         onPressed: () {},
                         child: const Text(
@@ -110,7 +110,7 @@ class _LoginEmailState extends State<LoginEmail> {
                         ),
                       ),
                       const SizedBox(height: 12),
-                      // "Or" Divider
+                      
                       Row(
                         children: const [
                           Expanded(
@@ -129,7 +129,7 @@ class _LoginEmailState extends State<LoginEmail> {
                         ],
                       ),
                       const SizedBox(height: 20),
-                      // Social Buttons
+                      
                       _buildSocialButton(
                         icon: Icons.facebook,
                         text: 'Login with Facebook',
@@ -180,7 +180,7 @@ class _LoginEmailState extends State<LoginEmail> {
                         iconColor: Colors.black,
                       ),
                       const SizedBox(height: 24),
-                      // Sign Up Text
+                      
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
