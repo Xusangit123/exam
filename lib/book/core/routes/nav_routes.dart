@@ -1,3 +1,4 @@
+import 'package:firebase/book/features/account/account.dart';
 import 'package:firebase/book/features/explore/explore_screen.dart';
 import 'package:firebase/book/features/home/book_detail.dart';
 import 'package:firebase/book/features/home/home_screen.dart';
@@ -13,16 +14,19 @@ import 'package:go_router/go_router.dart';
 // import 'screens/player_screen.dart';
 
 class AppRouter {
-  static final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>();
-  static final GlobalKey<NavigatorState> _homeNavigatorKey = GlobalKey<NavigatorState>();
-  static final GlobalKey<NavigatorState> _exploreNavigatorKey = GlobalKey<NavigatorState>();
-  static final GlobalKey<NavigatorState> _libraryNavigatorKey = GlobalKey<NavigatorState>();
+  static final GlobalKey<NavigatorState> _rootNavigatorKey =
+      GlobalKey<NavigatorState>();
+  static final GlobalKey<NavigatorState> _homeNavigatorKey =
+      GlobalKey<NavigatorState>();
+  static final GlobalKey<NavigatorState> _exploreNavigatorKey =
+      GlobalKey<NavigatorState>();
+  static final GlobalKey<NavigatorState> _libraryNavigatorKey =
+      GlobalKey<NavigatorState>();
 
   static final GoRouter router = GoRouter(
     navigatorKey: _rootNavigatorKey,
     initialLocation: '/home',
     routes: [
-     
       StatefulShellRoute.indexedStack(
         builder: (context, state, navigationShell) {
           return MainShellScreen(navigationShell: navigationShell);
@@ -47,7 +51,7 @@ class AppRouter {
               ),
             ],
           ),
-          
+
           StatefulShellBranch(
             navigatorKey: _exploreNavigatorKey,
             routes: [
@@ -57,7 +61,7 @@ class AppRouter {
               ),
             ],
           ),
-      
+
           StatefulShellBranch(
             navigatorKey: _libraryNavigatorKey,
             routes: [
@@ -73,10 +77,14 @@ class AppRouter {
       GoRoute(
         parentNavigatorKey: _rootNavigatorKey,
         path: '/player',
-        pageBuilder: (context, state) => const MaterialPage(
-          fullscreenDialog: true,
-          child: PlayerScreen(),
-        ),
+        pageBuilder: (context, state) =>
+            const MaterialPage(fullscreenDialog: true, child: PlayerScreen()),
+      ),
+      GoRoute(
+        parentNavigatorKey: _rootNavigatorKey,
+        path: '/account',
+        builder: (context, state) =>
+            const AccountScreen(), // Biz yuqorida yozgan sahifa
       ),
     ],
   );

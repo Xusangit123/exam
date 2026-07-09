@@ -125,15 +125,21 @@ class HomeScreen extends StatelessWidget {
             )
           ],
         ),
-        actions: const [
-          Padding(
-            padding: EdgeInsets.only(right: 16.0),
-            child: CircleAvatar(
-              radius: 22,
-              backgroundImage: AssetImage('assets/images/john_doe.png'), 
-            ),
-          )
-        ],
+       actions: [ 
+    Padding(
+      padding: const EdgeInsets.only(right: 16.0),
+      child: GestureDetector(
+        onTap: () {
+          // GoRouter orqali profil sahifasiga o'tish
+          context.push('/account'); 
+        },
+        child: const CircleAvatar(
+          radius: 22,
+          backgroundImage: AssetImage('assets/images/john_doe.png'), 
+        ),
+      ),
+    )
+  ],
       ),
       body: ListView(
         physics: const BouncingScrollPhysics(),

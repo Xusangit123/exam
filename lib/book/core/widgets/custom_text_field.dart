@@ -7,7 +7,8 @@ class CustomTextField extends StatefulWidget {
   final String? labelText;
   final bool isPassword;
   final bool isSuccess;
-  // Flutter-ning standart validator funksiyasi qo'shildi
+  final Widget? trailingIcon;
+  final TextInputType? keyboardType;
   final String? Function(String?)? validator;
   final TextEditingController? controller;
 
@@ -21,6 +22,8 @@ class CustomTextField extends StatefulWidget {
     this.controller,
     this.fillColor,
     this.styleColor,
+    this.trailingIcon,
+    this.keyboardType,
   }) : super(key: key);
 
   @override
@@ -28,7 +31,6 @@ class CustomTextField extends StatefulWidget {
 }
 
 class _CustomTextFieldState extends State<CustomTextField> {
-  // Parol holatini boshqarish uchun ichki o'zgaruvchi
   late bool _isObscure;
 
   @override

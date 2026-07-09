@@ -38,6 +38,8 @@
 // }
 
 import 'package:firebase/book/core/routes/nav_routes.dart';
+import 'package:firebase/book/features/account/account.dart';
+import 'package:firebase/book/features/account/payment.dart';
 import 'package:firebase/book/features/auth/screens/forgot_password.dart';
 import 'package:firebase/book/features/auth/screens/forgot_password_verify.dart';
 import 'package:firebase/book/features/auth/screens/login_email.dart';
@@ -60,6 +62,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
+      // home: const AccountScreen(),
       routerConfig: AppRouter.router
     );
   }
