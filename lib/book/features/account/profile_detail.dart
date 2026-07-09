@@ -8,7 +8,7 @@ class ProfileDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-       
+      
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
